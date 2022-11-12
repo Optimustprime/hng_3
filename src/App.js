@@ -1,17 +1,17 @@
 import {
-    BrowserRouter as Router, Route, Routes
+    HashRouter as Router, Route, Routes
 } from "react-router-dom";
 import Home from "./components/Home";
-import Contact from "./components/Contact";
-import Footer from "./components/footer"
+import Contact from "./components/Place";
+import Footer from "./components/footer";
 import React from "react";
 
 function App() {
   return (
        <Router>
                <Routes>
-                   <Route path ="/" element={<Home/>}/>
-                   <Route path ="/contactus" element={<Contact/>} />
+                   <Route path ="" element={<Home/>} exact />
+                   <Route path ="/place" element={<Contact/>} />
                </Routes>
            <Footer/>
        </Router>
