@@ -22,7 +22,7 @@ function First(){
     return(
         <div className="hunn">
             <div className='row hun'>
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                     <div className="first_note">
                         Rent a <span className="note">Place</span> away from<br/> <span className="note">Home</span> in the <span className="note">Metaverse</span>
                     </div>
@@ -38,7 +38,7 @@ function First(){
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                     <img className="first_img" src={first_img} alt="first img"/>
                 </div>
             </div>
@@ -51,7 +51,7 @@ function First(){
 
 function Body_top(){
     return(
-        <div>
+        <div className='res'>
             <img src={divide} alt="divide img" className="divide"/>
             <div className="inspire">Inspiration for your next adventure</div>
         </div>
@@ -78,7 +78,7 @@ function Body(props){
             <div className="cards">
                 <img className="ava" src={props.src} alt="images.png"/>
                 <div className="b__word">Desert <span className="space"> king</span>  <span className="b_word">1MBT per night</span> </div>
-                <div className="b__word">2345km  <span className="space_">away</span> available for 2weeks stay</div>
+                <div className="b__word">2345km  <span className="space_">away</span> <span className='ff'>available for 2weeks stay</span></div>
                 <img className="star" src={star} alt="images.png"/>
             </div>
         </div>

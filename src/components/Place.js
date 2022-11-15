@@ -1,7 +1,6 @@
 import Header  from './navbar';
 import set from '../images/setting-5@2x.png';
-import React from "react";
-import logo from "../images/logo.png";
+import React, {useState} from "react";
 import one from "../images/one.png";
 import two from "../images/two.png";
 import three from "../images/three.png";
@@ -59,18 +58,13 @@ function Body_(props){
     )
 }
 function Body(){
+    const [show, setShow] = useState(false);
     return(
         <div>
             <div className="navbar navbar-expand-lg navbar-light nav-pad back">
                 <div className="container-fluid">
-                    {/*<img className="logo" src={logo} alt="logo"/>*/}
-                    {/*<button className="navbar-toggler" type="button" data-bs-toggle="collapse"*/}
-                    {/*        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"*/}
-                    {/*        aria-expanded="false" aria-label="Toggle navigation">*/}
-                    {/*    <span className="navbar-toggler-icon"/>*/}
-                    {/*</button>*/}
-                    <div className=" navbar-collapse" >
-                        <ul className="navbar-nav me-auto ms-auto mb-2 mb-lg-0 nav-fonn">
+                    <div className=" navbar-collapse " >
+                        <ul className="navbar-nav me-auto ms-auto mb-2 mb-lg-0 nav-fonn blind">
                             <li className="nav-item ms-4 nav-font">
                                 <a className="active" aria-current="page" href="">Resturant</a>
                             </li>
@@ -96,8 +90,36 @@ function Body(){
                                 <a className="active" aria-current="page" href="">Farm</a>
                             </li>
                         </ul>
+                        {
+                          show &&  <ul className="navbar-nav me-auto ms-auto mb-2 mb-lg-0 nav-fonn blind_">
+                                <li className="nav-item ms-4 nav-font">
+                                    <a className="active" aria-current="page" href="">Resturant</a>
+                                </li>
+                                <li className="nav-item ms-4 nav-font">
+                                    <a className="active" aria-current="page" href="#/place">Cottage</a>
+                                </li>
+                                <li className="nav-item ms-4 nav-font">
+                                    <a className="active" aria-current="page" href="">Castle</a>
+                                </li>
+                                <li className="nav-item ms-4 nav-font">
+                                    <a className="active" aria-current="page" href="">fantast city</a>
+                                </li>
+                                <li className="nav-item ms-4 nav-font">
+                                    <a className="active" aria-current="page" href="">beach</a>
+                                </li>
+                                <li className="nav-item ms-4 nav-font">
+                                    <a className="active" aria-current="page" href="">Carbins</a>
+                                </li>
+                                <li className="nav-item ms-4 nav-font">
+                                    <a className="active" aria-current="page" href="">Off-grid</a>
+                                </li>
+                                <li className="nav-item ms-4 nav-font">
+                                    <a className="active" aria-current="page" href="">Farm</a>
+                                </li>
+                            </ul>
+                        }
                         <div className="loca">
-                            <button>Location<img className='set' src={set} alt='set.png'/></button>
+                            <button onClick={()=> setShow(!show)}>Location<img className='set' src={set} alt='set.png'/></button>
 
                         </div>
                     </div>

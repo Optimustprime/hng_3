@@ -11,10 +11,10 @@ function Footer(props){
                 <div className="col-lg-3">
                     <img className="w_logo" src={white} />
                     <div className="row social">
-                        <div className='col-lg-3'>
+                        <div className='col-3'>
                             <img className='social_img' src={face} alt='images.png'/>
                         </div>
-                        <div className='col-lg-4'>
+                        <div className='col-4'>
                             <img className='social_img' src={insta} alt='images.png'/>
                         </div>
                         <div className='col '>
@@ -32,7 +32,7 @@ function Footer(props){
                     <div className='child'>Landlords</div>
                     <div className='child'>Discord</div>
                 </div>
-                <div className="col-lg-2">
+                <div className="col-lg-2 ll">
                     <div className='top'>
                         Places
                     </div>
@@ -41,7 +41,7 @@ function Footer(props){
                     <div className='child'>Beach</div>
                     <div className='child'>Learn more</div>
                 </div>
-                <div className="col-lg-2">
+                <div className="col-lg-2 ll">
                     <div className='top'>
                         About us
                     </div>

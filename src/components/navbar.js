@@ -1,12 +1,31 @@
 import logo from "../images/logo.png";
 import {Link} from "react-router-dom";
-import React from "react";
+import React, {useState} from "react";
+import x from '../images/x.png';
+import dog from '../images/dog.png';
+import dog_ from '../images/dog_.png';
+import arrow from '../images/arrow.png';
+
 export default function Header(){
+    const [show, setShow] = useState(false);
     return(
-        <div >
+        <div>
+            {
+                show && <div className='pop'>
+                <div className='meta'>
+                    <div className='m_t'>Connect Wallet<img onClick={()=> setShow(!show)} className='x' src={x}/></div>
+                    <hr/>
+                    <div className='m_s'>
+                        <div className='m_text'>Choose your preferred wallet:</div>
+                        <button className='m_button'><img className='dog' src={dog}/><div className='word' >Metamask</div><img className='arrow' src={arrow}/></button>
+                        <button className='m__button'><img className='dog' src={dog_}/><div className='word' >WalletConnect</div><img className='arrow' src={arrow}/></button>
+                    </div>
+                </div>
+                </div>
+            }
             <nav id="mynav" className="navbar navbar-expand-lg navbar-light fixed-top nav-pad">
                 <div className="container-fluid">
-                    <img className="logo" src={logo} alt="logo"/>
+                    <a href=''><img className="logo" src={logo} alt="logo"/></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +47,7 @@ export default function Header(){
                             </li>
                         </ul>
                         <div className="pad">
-                            <button>Connect wallet</button>
+                            <button onClick={()=> setShow(!show)}>Connect wallet</button>
                         </div>
                     </div>
                 </div>
