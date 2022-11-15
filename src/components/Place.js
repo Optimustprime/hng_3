@@ -51,7 +51,7 @@ function Body_(props){
             <div className="cards">
                 <img className="ava" src={props.src} alt="images.png"/>
                 <div className="b__word">Desert <span className="space"> king</span>  <span className="b_word">1MBT per night</span> </div>
-                <div className="b__word">2345km  <span className="space_">away</span> available for 2weeks stay</div>
+                <div className="b__word">2345km  <span className="space_">away</span> <span className='ff'>available for 2weeks stay</span></div>
                 <img className="star" src={star} alt="images.png"/>
             </div>
         </div>
@@ -62,7 +62,7 @@ function Body(){
     return(
         <div>
             <div className="navbar navbar-expand-lg navbar-light nav-pad back">
-                <div className="container-fluid">
+                <div className="container-fluid pp">
                     <div className=" navbar-collapse " >
                         <ul className="navbar-nav me-auto ms-auto mb-2 mb-lg-0 nav-fonn blind">
                             <li className="nav-item ms-4 nav-font">
